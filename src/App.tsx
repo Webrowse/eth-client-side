@@ -3,7 +3,7 @@ import { WagmiProvider, useAccount, useConnect, useConnectors, useDisconnect } f
 import { useReadContract } from 'wagmi'
 import './App.css'
 import { config } from './config'
-
+import { AllowUSDT } from './AllowUSDT';
 const client = new QueryClient();
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <QueryClientProvider client={client}>
         <ConnectWallet />
         <TotalSupply />
+        <AllowUSDT />
      </QueryClientProvider>
     </WagmiProvider>
   )
